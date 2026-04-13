@@ -194,7 +194,7 @@ def validate_dataset(file_path: Path) -> None:
 # ─────────────────────────────────────────────────────────────────
 def _run_hdfs(args: list[str]) -> subprocess.CompletedProcess:
     """Execute an HDFS shell command via subprocess."""
-    cmd = ["hdfs", "dfs"] + args
+    cmd = ["C:\\hadoop-3.2.2\\bin\\hdfs.cmd", "dfs"] + args
     log.info("Running: %s", " ".join(cmd))
     result = subprocess.run(
         cmd, capture_output=True, text=True
